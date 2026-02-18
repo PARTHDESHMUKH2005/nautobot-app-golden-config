@@ -492,7 +492,7 @@ class GenerateConfigPlans(Job, FormEntry):
             config_set = generate_config_set_from_manual(device, self._commands, context=default_context)
             if not config_set:
                 self.logger.debug(
-                    f"Device {self.device} did not return a rendered config set from the provided commands."
+                    f"Device {device} did not return a rendered config set from the provided commands."
                 )
                 continue
             config_plan = ConfigPlan.objects.create(
